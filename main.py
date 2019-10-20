@@ -33,7 +33,7 @@ def extra_processing(pipeline):
     #     print((x, y, w, h))
 
     for keypoint in pipeline.find_blobs_output:
-        # x, y = keypoint.pt.x, keypoint.pt.y
+        # x, y = keypoint.pt[0], keypoint.pt[1]
         print(keypoint.pt)
 
     # Publish to the '/vision/red_areas' network table
